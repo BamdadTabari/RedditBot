@@ -12,5 +12,7 @@ reddit = praw.Reddit(client_id="your c id",
 reddit.user.me()
 
 # get data from reddit
-subreddit = reddit.subreddit("learnPython")
+sub_reddit = reddit.subreddit("learnPython")
+for submission in sub_reddit.hot(limit=5):
+    print(submission.title)
 
